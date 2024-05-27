@@ -27,7 +27,7 @@ h1 {
     overflow: hidden;
 }
 
-.balloon, .flower {
+.balloon, .flower, .firework {
     position: absolute;
     bottom: -150px;
 }
@@ -66,6 +66,26 @@ h1 {
 .flower:nth-child(14) { left: 75%; animation-duration: 9s; }
 .flower:nth-child(15) { left: 85%; animation-duration: 10s; }
 
+.firework {
+    width: 5px;
+    height: 5px;
+    background: radial-gradient(circle, #ff0, #f00, #00f, #0f0);
+    border-radius: 50%;
+    animation: firework 2s ease-in-out infinite;
+    animation-iteration-count: 1;
+}
+
+.firework:nth-child(16) { left: 10%; animation-duration: 1.5s; }
+.firework:nth-child(17) { left: 20%; animation-duration: 2s; }
+.firework:nth-child(18) { left: 30%; animation-duration: 2.5s; }
+.firework:nth-child(19) { left: 40%; animation-duration: 1.8s; }
+.firework:nth-child(20) { left: 50%; animation-duration: 2.2s; }
+.firework:nth-child(21) { left: 60%; animation-duration: 2.7s; }
+.firework:nth-child(22) { left: 70%; animation-duration: 2.1s; }
+.firework:nth-child(23) { left: 80%; animation-duration: 2.4s; }
+.firework:nth-child(24) { left: 90%; animation-duration: 2.6s; }
+.firework:nth-child(25) { left: 95%; animation-duration: 2.9s; }
+
 @keyframes float {
     0% { transform: translateY(0); opacity: 1; }
     50% { opacity: 1; }
@@ -76,4 +96,10 @@ h1 {
     0% { transform: translateY(0) rotate(0deg); opacity: 1; }
     50% { opacity: 1; }
     100% { transform: translateY(-120vh) rotate(720deg); opacity: 0; }
+}
+
+@keyframes firework {
+    0% { transform: scale(0); opacity: 1; }
+    50% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0); opacity: 0; }
 }
