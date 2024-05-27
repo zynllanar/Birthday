@@ -24,6 +24,7 @@ h1 {
     position: relative;
     width: 100%;
     height: 80vh;
+    overflow: hidden;
 }
 
 .balloon, .flower {
@@ -37,12 +38,18 @@ h1 {
     background: radial-gradient(circle at 50% 50%, #ff6f61, #ff8a80);
     border-radius: 50% 50% 50% 50%;
     animation: float 5s ease-in-out infinite;
+    animation-iteration-count: 1;
 }
 
-.balloon:nth-child(2) { left: 20%; background: radial-gradient(circle at 50% 50%, #ffa751, #ffe259); animation-duration: 6s; }
-.balloon:nth-child(3) { left: 40%; background: radial-gradient(circle at 50% 50%, #ff55a3, #ff6fd8); animation-duration: 7s; }
-.balloon:nth-child(4) { left: 60%; background: radial-gradient(circle at 50% 50%, #3dc1d3, #6ebfff); animation-duration: 8s; }
-.balloon:nth-child(5) { left: 80%; background: radial-gradient(circle at 50% 50%, #9bffb3, #baffc9); animation-duration: 9s; }
+.balloon:nth-child(2) { left: 10%; background: radial-gradient(circle at 50% 50%, #ffa751, #ffe259); animation-duration: 6s; }
+.balloon:nth-child(3) { left: 20%; background: radial-gradient(circle at 50% 50%, #ff55a3, #ff6fd8); animation-duration: 7s; }
+.balloon:nth-child(4) { left: 30%; background: radial-gradient(circle at 50% 50%, #3dc1d3, #6ebfff); animation-duration: 8s; }
+.balloon:nth-child(5) { left: 40%; background: radial-gradient(circle at 50% 50%, #9bffb3, #baffc9); animation-duration: 9s; }
+.balloon:nth-child(6) { left: 50%; background: radial-gradient(circle at 50% 50%, #e1bee7, #f3e5f5); animation-duration: 10s; }
+.balloon:nth-child(7) { left: 60%; background: radial-gradient(circle at 50% 50%, #ff8a80, #ff5252); animation-duration: 11s; }
+.balloon:nth-child(8) { left: 70%; background: radial-gradient(circle at 50% 50%, #69f0ae, #00e676); animation-duration: 12s; }
+.balloon:nth-child(9) { left: 80%; background: radial-gradient(circle at 50% 50%, #ffd54f, #ffeb3b); animation-duration: 13s; }
+.balloon:nth-child(10) { left: 90%; background: radial-gradient(circle at 50% 50%, #82b1ff, #448aff); animation-duration: 14s; }
 
 .flower {
     width: 50px;
@@ -50,20 +57,23 @@ h1 {
     background: radial-gradient(circle at 50% 50%, #fbd786, #f7797d);
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     animation: floatFlower 7s ease-in-out infinite;
+    animation-iteration-count: 1;
 }
 
-.flower:nth-child(6) { left: 15%; animation-duration: 7s; }
-.flower:nth-child(7) { left: 35%; animation-duration: 8s; }
-.flower:nth-child(8) { left: 70%; animation-duration: 6s; }
+.flower:nth-child(11) { left: 15%; animation-duration: 7s; }
+.flower:nth-child(12) { left: 35%; animation-duration: 8s; }
+.flower:nth-child(13) { left: 55%; animation-duration: 6s; }
+.flower:nth-child(14) { left: 75%; animation-duration: 9s; }
+.flower:nth-child(15) { left: 85%; animation-duration: 10s; }
 
 @keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-300px); }
-    100% { transform: translateY(0); }
+    0% { transform: translateY(0); opacity: 1; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-120vh); opacity: 0; }
 }
 
 @keyframes floatFlower {
-    0% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-200px) rotate(360deg); }
-    100% { transform: translateY(0) rotate(720deg); }
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-120vh) rotate(720deg); opacity: 0; }
 }
