@@ -18,6 +18,8 @@ h1 {
     color: #ff69b4;
     font-size: 4rem;
     margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
 }
 
 .decorations {
@@ -37,27 +39,25 @@ h1 {
     height: 70px;
     background: radial-gradient(circle at 50% 50%, #ff6f61, #ff8a80);
     border-radius: 50% 50% 50% 50%;
-    animation: float 5s ease-in-out infinite;
-    animation-iteration-count: 1;
+    animation: float 10s ease-in-out infinite;
 }
 
-.balloon:nth-child(2) { left: 10%; background: radial-gradient(circle at 50% 50%, #ffa751, #ffe259); animation-duration: 6s; }
-.balloon:nth-child(3) { left: 20%; background: radial-gradient(circle at 50% 50%, #ff55a3, #ff6fd8); animation-duration: 7s; }
-.balloon:nth-child(4) { left: 30%; background: radial-gradient(circle at 50% 50%, #3dc1d3, #6ebfff); animation-duration: 8s; }
-.balloon:nth-child(5) { left: 40%; background: radial-gradient(circle at 50% 50%, #9bffb3, #baffc9); animation-duration: 9s; }
-.balloon:nth-child(6) { left: 50%; background: radial-gradient(circle at 50% 50%, #e1bee7, #f3e5f5); animation-duration: 10s; }
-.balloon:nth-child(7) { left: 60%; background: radial-gradient(circle at 50% 50%, #ff8a80, #ff5252); animation-duration: 11s; }
-.balloon:nth-child(8) { left: 70%; background: radial-gradient(circle at 50% 50%, #69f0ae, #00e676); animation-duration: 12s; }
-.balloon:nth-child(9) { left: 80%; background: radial-gradient(circle at 50% 50%, #ffd54f, #ffeb3b); animation-duration: 13s; }
-.balloon:nth-child(10) { left: 90%; background: radial-gradient(circle at 50% 50%, #82b1ff, #448aff); animation-duration: 14s; }
+.balloon:nth-child(2) { left: 10%; background: radial-gradient(circle at 50% 50%, #ffa751, #ffe259); animation-duration: 11s; }
+.balloon:nth-child(3) { left: 20%; background: radial-gradient(circle at 50% 50%, #ff55a3, #ff6fd8); animation-duration: 12s; }
+.balloon:nth-child(4) { left: 30%; background: radial-gradient(circle at 50% 50%, #3dc1d3, #6ebfff); animation-duration: 13s; }
+.balloon:nth-child(5) { left: 40%; background: radial-gradient(circle at 50% 50%, #9bffb3, #baffc9); animation-duration: 14s; }
+.balloon:nth-child(6) { left: 50%; background: radial-gradient(circle at 50% 50%, #e1bee7, #f3e5f5); animation-duration: 15s; }
+.balloon:nth-child(7) { left: 60%; background: radial-gradient(circle at 50% 50%, #ff8a80, #ff5252); animation-duration: 16s; }
+.balloon:nth-child(8) { left: 70%; background: radial-gradient(circle at 50% 50%, #69f0ae, #00e676); animation-duration: 17s; }
+.balloon:nth-child(9) { left: 80%; background: radial-gradient(circle at 50% 50%, #ffd54f, #ffeb3b); animation-duration: 18s; }
+.balloon:nth-child(10) { left: 90%; background: radial-gradient(circle at 50% 50%, #82b1ff, #448aff); animation-duration: 19s; }
 
 .flower {
     width: 50px;
     height: 50px;
     background: radial-gradient(circle at 50% 50%, #fbd786, #f7797d);
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    animation: floatFlower 7s ease-in-out infinite;
-    animation-iteration-count: 1;
+    animation: floatFlower 10s ease-in-out infinite;
 }
 
 .flower:nth-child(11) { left: 15%; animation-duration: 7s; }
@@ -71,7 +71,7 @@ h1 {
     height: 5px;
     background: radial-gradient(circle, #ff0, #f00, #00f, #0f0);
     border-radius: 50%;
-    animation: firework 2s ease-in-out infinite;
+    animation: firework 1s ease-in-out infinite;
     opacity: 0;
     animation-iteration-count: infinite;
 }
@@ -103,4 +103,9 @@ h1 {
     0% { transform: scale(0); opacity: 1; }
     50% { transform: scale(1.5); opacity: 1; }
     100% { transform: scale(0); opacity: 0; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
